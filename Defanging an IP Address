@@ -1,0 +1,14 @@
+public class Solution {
+    public string DefangIPaddr(string address) {
+        String address2 = "";
+        for (int i = 0; i < address.Length;i++){
+            if (address[i] == '.'){
+                address2 += "[.]";
+            }
+            else{
+                address2 += address[i];
+            }
+        }
+        return address2;
+    }
+}
