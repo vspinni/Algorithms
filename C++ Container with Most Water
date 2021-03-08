@@ -1,0 +1,25 @@
+class Solution {
+public:
+    int maxArea(vector<int>& height) {
+        int area = 0;
+        int max = 0;
+        int lower;
+        
+        for (int i = 0; i < height.size();i++){
+            for (int j = 0; j < height.size();j++){
+                lower = 0;
+                
+                if (height[i] < height[j]) 
+                    lower = height[i];
+                else 
+                    lower = height[j];
+                
+                    area = lower * abs(j-i);
+                    
+                if (area > max)
+                    max = area;
+            }
+        }
+        return max;
+    }
+};
