@@ -1,0 +1,17 @@
+public class Solution {
+    public int NumWaterBottles(int numBottles, int numExchange) {
+        int result = numBottles;
+        int empty = numBottles;
+        int full = 0;
+        
+        while(empty / numExchange > 0){
+            full = empty / numExchange;
+            empty = empty % numExchange + full;
+            result+=full;
+            full = 0;
+            
+        }
+        
+        return result;
+    }
+}
