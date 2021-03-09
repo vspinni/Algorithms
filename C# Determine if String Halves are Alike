@@ -1,0 +1,21 @@
+using System.Globalization;
+
+public class Solution {
+    public bool HalvesAreAlike(string s) {
+        string h1 = s.Substring(0,s.Length/2).ToLower();
+        string h2 = s.Substring(s.Length/2).ToLower();
+        int count1 = 0;
+        int count2 = 0;
+        for (int i = 0; i < h1.Length;i++){
+            if (h1[i] == 'a' || h1[i] == 'e' || h1[i] == 'i' || h1[i] == 'o' || h1[i] == 'u')
+                count1++;
+         if (h2[i] == 'a' || h2[i] == 'e' || h2[i] == 'i' || h2[i] == 'o' || h2[i] == 'u')
+                count2++;
+        }
+        
+        if (count1 == count2 )
+            return true;
+        else
+            return false;
+    }
+}
