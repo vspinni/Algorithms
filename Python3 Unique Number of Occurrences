@@ -1,0 +1,15 @@
+class Solution:
+    def uniqueOccurrences(self, arr: List[int]) -> bool:
+        arr.sort()
+        count = {}
+        for x in arr:
+            if x not in count.keys():
+                count[x] = 0 
+            count[x] +=1
+        d = count.values()
+        s = set(d)
+        if len(d) != len(s):
+            return False
+        else:
+            return True
+        
