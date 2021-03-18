@@ -1,0 +1,14 @@
+class Solution:
+    def subtractProductAndSum(self, n: int) -> int:
+        arr = []
+        add = 0
+        mult = 1
+        while n != 0:
+            arr.append(n%10)
+            n  = int(n/10)
+        
+        for i in arr:
+            mult*=i
+            add+=i
+            
+        return mult-add
