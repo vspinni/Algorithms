@@ -1,0 +1,11 @@
+class Solution:
+    def restoreString(self, s: str, indices: List[int]) -> str:
+        arr = list(indices)
+        res = ""
+        for i,x in enumerate(s):
+            arr[indices[i]] = s[i]
+        
+        for x in arr:
+            res+=x
+        
+        return res
