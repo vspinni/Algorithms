@@ -1,0 +1,8 @@
+class Solution:
+    def decode(self, encoded: List[int], first: int) -> List[int]:
+        dec =[]
+        dec.append(first)
+        for x,y in enumerate(encoded):
+            t = dec[x]
+            dec.append(y^dec[x])
+        return dec
